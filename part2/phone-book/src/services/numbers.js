@@ -1,5 +1,9 @@
 import axios from "axios";
+<<<<<<< HEAD
 const baseURL = "/api/persons";
+=======
+const baseURL = "http://localhost:3001/api/persons";
+>>>>>>> 73c46bbac4958629505aaf9ab20aabae3eacbd91
 
 const getNumbers = () => axios.get(baseURL).then((response) => response.data);
 const addNew = (newObject) =>
