@@ -32,7 +32,7 @@ const Numbers = ({ persons, onDel }) => {
       <h2>Numbers</h2>
       {persons.map((person) => (
         <div key={person.name}>
-          {person.name} {person.number}
+          {person.name} {person.phoneNumber}
           <button onClick={() => onDel(person.id)}>delete</button>
         </div>
       ))}
@@ -64,10 +64,10 @@ const App = () => {
     e.preventDefault();
     const newObject = {
       name: newName,
-      number: newPhone,
+      phoneNumber: newPhone,
     };
     const person = persons.find((p) => p.name === newName);
-    const changedNumber = { ...person, number: newPhone };
+    const changedNumber = { ...person, phoneNumber: newPhone };
     if (persons.includes(person)) {
       if (person.name === newName) {
         if (
@@ -89,6 +89,14 @@ const App = () => {
                 setMessage(null);
                 setMessageType(null);
               }, 5000);
+            })
+            .catch((error) => {
+              setMessage(error.response.data.error);
+              setMessageType("error");
+              setTimeout(() => {
+                setMessage(null);
+                setMessageType(null);
+              }, 5000);
             });
       }
     } else
@@ -98,6 +106,21 @@ const App = () => {
         .then(() => {
           setMessage(`Added ${newObject.name}`);
           setMessageType("success");
+          setTimeout(() => {
+            setMessage(null);
+            setMessageType(null);
+          }, 5000);
+        })
+        .catch((error) => {
+          console.log(error.response.data.error);
+          setMessage(error.response.data.error);
+          // error.name
+          // `${
+          //   newObject.name.length < 3 || newObject.phoneNumber.length < 8
+          //     ? "Name must be at least 3 characters or number must be at least 8 degit"
+          //     : error.message
+          // }`
+          setMessageType("error");
           setTimeout(() => {
             setMessage(null);
             setMessageType(null);
