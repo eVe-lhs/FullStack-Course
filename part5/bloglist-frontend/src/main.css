@@ -1,0 +1,18 @@
+.error {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border-color: red;
+  font-size: large;
+  border-style: dashed;
+  background-color: bisque;
+}
+.success {
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  border-color: green;
+  font-size: large;
+  border-style: dashed;
+}
