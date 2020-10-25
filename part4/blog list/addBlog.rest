@@ -1,6 +1,6 @@
-POST http://localhost:3003/api/blogs
+POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVWZSIsImlkIjoiNWY3NzNmN2YyNWE5MzkyOTVjYjk2ZTY4IiwiaWF0IjoxNjAxNjk1MzgwfQ.xHOgLgrsP2dSPKE5UDhmhvLtBjVb_2im_otGziXY3QM
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVWZSIsImlkIjoiNWY3NzNmN2YyNWE5MzkyOTVjYjk2ZTY4IiwiaWF0IjoxNjAzNjMyOTAwfQ.TbSax7hqMd-le21_r-i4iUNBzlnDzmiM5GTE-ZWO27U
   
   {
     "title": "hahaha",
