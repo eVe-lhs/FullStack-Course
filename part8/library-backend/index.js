@@ -1,3 +1,4 @@
+require("dotenv").config();
 const {
   ApolloServer,
   gql,
@@ -9,8 +10,7 @@ const Book = require("./models/books");
 const Author = require("./models/authors");
 const User = require("./models/user");
 const mongoose = require("mongoose");
-const MONGODB_URI =
-  "mongodb+srv://linhtetswe:lhs20601@project0.6qcuv.mongodb.net/library?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI;
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = "NEED_HERE_A_SECRET_KEY";
 const pubSub = new PubSub();
