@@ -45,7 +45,7 @@ export const AddEntryForm: React.FC<Props> = ({ onSubmit, onCancel }) => {
     description: "",
     date: "",
     specialist: "",
-    diagnosisCodes: [""],
+    diagnosisCodes: [],
   };
   const basicSchema = {
     description: Yup.string().required("Field Required"),
